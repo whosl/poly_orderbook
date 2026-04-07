@@ -1,0 +1,52 @@
+module.exports = {
+  apps: [
+    {
+      name: "polymarket-eth-15m",
+      cwd: "/home/ubuntu/poly_websockt",
+      script: "/home/ubuntu/poly_websockt/polymarket_eth_15m_ws.py",
+      interpreter: "python3",
+      args: [
+        "--label",
+        "eth15m",
+        "--slug",
+        "eth-updown-15m-1775530800",
+        "--save-dir",
+        "/home/ubuntu/poly_websockt/history/eth15m",
+        "--json",
+      ],
+      autorestart: true,
+      restart_delay: 5000,
+      max_restarts: 1000,
+      time: true,
+      out_file: "/home/ubuntu/poly_websockt/logs/polymarket-eth-15m.out.log",
+      error_file: "/home/ubuntu/poly_websockt/logs/polymarket-eth-15m.err.log",
+      env: {
+        PYTHONUNBUFFERED: "1",
+      },
+    },
+    {
+      name: "polymarket-btc-15m",
+      cwd: "/home/ubuntu/poly_websockt",
+      script: "/home/ubuntu/poly_websockt/polymarket_eth_15m_ws.py",
+      interpreter: "python3",
+      args: [
+        "--label",
+        "btc15m",
+        "--slug",
+        "btc-updown-15m-1775530800",
+        "--save-dir",
+        "/home/ubuntu/poly_websockt/history/btc15m",
+        "--json",
+      ],
+      autorestart: true,
+      restart_delay: 5000,
+      max_restarts: 1000,
+      time: true,
+      out_file: "/home/ubuntu/poly_websockt/logs/polymarket-btc-15m.out.log",
+      error_file: "/home/ubuntu/poly_websockt/logs/polymarket-btc-15m.err.log",
+      env: {
+        PYTHONUNBUFFERED: "1",
+      },
+    },
+  ],
+};
