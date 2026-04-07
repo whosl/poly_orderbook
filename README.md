@@ -48,3 +48,6 @@ python3 polymarket_history_replay.py --slug eth-updown-15m-1775530800 snapshot-a
 - `history/<label>/<slug>/events.jsonl.gz`
 - `history/<label>/<slug>/snapshots.jsonl.gz`
 
+## License
+
+MIT
